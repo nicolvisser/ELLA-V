@@ -2,12 +2,14 @@ import torch
 import torchaudio
 from IPython.display import Audio, display
 
-from ellav.model import ELLAVGARModel
-
 wav, sr = torchaudio.load(
     "/mnt/wsl/nvme/datasets/LibriSpeech/dev-clean/1272/128104/1272-128104-0000.flac"
 )
 assert sr == 16000
+
+LAYER = 11
+K = 500
+LMBDA = 0
 
 wavlm = torch.hub.load(
     "nicolvisser/wavlm-codebooks",
@@ -26,8 +28,13 @@ codebook = torch.hub.load(
     trust_repo=True,
 ).cuda()
 
-ellav = ELLAVGARModel.from_pretrained_checkpoint(
-    "/mnt/wsl/nvme/code/ella-v-acoustic-model/checkpoints/checkpoints-newest-really-really/wavlm-layer-11-km-500-lmbda-0-train-clean-10k-40hz.pt"
+ellav = torch.hub.load(
+    "nicolvisser/ELLA-V",
+    "ellav_units_to_wavtokenizer",
+    k=K,
+    lmbda=LMBDA,
+    progress=True,
+    trust_repo=True,
 ).cuda()
 ellav.eval()
 
@@ -40,7 +47,7 @@ with torch.inference_mode():
         padding_mask=None,
         mask=False,
         ret_conv=False,
-        output_layer=11,
+        output_layer=LAYER,
         ret_layer_results=False,
     )  # [1, T, D]
     features = features.squeeze(0)  # [T, D]
