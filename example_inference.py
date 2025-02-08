@@ -9,36 +9,32 @@ assert sr == 16000
 
 LAYER = 11
 K = 500
-LMBDA = 0
 
 wavlm = torch.hub.load(
     "nicolvisser/wavlm-codebooks",
     "wavlm_large",
-    progress=True,
-    trust_repo=True,
 ).cuda()
 wavlm.eval()
 
 codebook = torch.hub.load(
     "nicolvisser/wavlm-codebooks",
     "codebook",
-    layer=11,
-    k=500,
-    progress=True,
-    trust_repo=True,
+    layer=LAYER,
+    k=K,
 ).cuda()
 
 ellav = torch.hub.load(
     "nicolvisser/ELLA-V",
     "ellav_units_to_wavtokenizer",
     k=K,
-    lmbda=LMBDA,
-    progress=True,
-    trust_repo=True,
+    lmbda=0,
 ).cuda()
 ellav.eval()
 
-wavtokenizer = torch.hub.load("nicolvisser/WavTokenizer", "small_600_24k_4096").cuda()
+wavtokenizer = torch.hub.load(
+    "nicolvisser/WavTokenizer",
+    "small_600_24k_4096",
+).cuda()
 wavtokenizer.eval()
 
 with torch.inference_mode():
