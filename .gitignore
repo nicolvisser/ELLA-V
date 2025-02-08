@@ -1,0 +1,12 @@
+__pycache__
+
+.conda/
+.venv/
+env/
+
+checkpoints/
+data/
+wandb/
+temp/
+
+*.sh
