@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ella-v-acoustic-model"
+name = "ellav"
 version = "0.1.0"
 description = ""
 authors = ["nicolvisser <nicolvisser@yahoo.com>"]
