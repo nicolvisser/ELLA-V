@@ -16,12 +16,12 @@ ellav_phone_to_wavtokenizer_url = release_url + "ella-v-phonemes-us-arpa-clean-1
 
 
 ellav_unit_to_wavtokenizer_urls = {
-    (0,0):       release_url + "ella-v-wavlm-layer-11-k-100-lmbda-0-clean-10k-40hz-c4686bf9.pt",
-    (0,600):     release_url + "ella-v-wavlm-layer-11-k-100-lmbda-600-clean-10k-40hz-1448a9ec.pt",
-    (0,1500):    release_url + "ella-v-wavlm-layer-11-k-100-lmbda-1500-clean-10k-40hz-6bdae6f8.pt",
-    (0,3000):    release_url + "ella-v-wavlm-layer-11-k-100-lmbda-3000-clean-10k-40hz-6e277bbd.pt",
-    (0,5000):    release_url + "ella-v-wavlm-layer-11-k-100-lmbda-5000-clean-10k-40hz-90149573.pt",
-    (0,9000):    release_url + "ella-v-wavlm-layer-11-k-100-lmbda-9000-clean-10k-40hz-58352115.pt",
+    (100,0):       release_url + "ella-v-wavlm-layer-11-k-100-lmbda-0-clean-10k-40hz-c4686bf9.pt",
+    (100,600):     release_url + "ella-v-wavlm-layer-11-k-100-lmbda-600-clean-10k-40hz-1448a9ec.pt",
+    (100,1500):    release_url + "ella-v-wavlm-layer-11-k-100-lmbda-1500-clean-10k-40hz-6bdae6f8.pt",
+    (100,3000):    release_url + "ella-v-wavlm-layer-11-k-100-lmbda-3000-clean-10k-40hz-6e277bbd.pt",
+    (100,5000):    release_url + "ella-v-wavlm-layer-11-k-100-lmbda-5000-clean-10k-40hz-90149573.pt",
+    (100,9000):    release_url + "ella-v-wavlm-layer-11-k-100-lmbda-9000-clean-10k-40hz-58352115.pt",
     (200,0):     release_url + "ella-v-wavlm-layer-11-k-200-lmbda-0-clean-10k-40hz-bc26448e.pt",
     (200,700):   release_url + "ella-v-wavlm-layer-11-k-200-lmbda-700-clean-10k-40hz-32e22dc4.pt",
     (200,1500):  release_url + "ella-v-wavlm-layer-11-k-200-lmbda-1500-clean-10k-40hz-7b009e62.pt",
