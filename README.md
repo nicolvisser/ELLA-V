@@ -9,3 +9,4 @@ Therefore we only need the generalized autoregressive model (GAR) from ELLA-V an
 We use ELLA-V as an acoustic model to generate speech from discrete units.
 In other words, we use it in a textless-NLP (spoken language modeling) setup and not in a text-to-speech setup.
 Therefore, the pretrained checkpoints may be of little interest to you, if you are looking for a text-to-speech model.
+See our paper, [Spoken Language Modeling with Duration-Penalized Self-Supervised Units](https://arxiv.org/abs/2505.23494), for more details.
